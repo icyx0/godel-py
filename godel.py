@@ -100,9 +100,6 @@ def GodelNumbering():
         self.sentntial_variables = self.match_any_with_ticks(SENTNTIAL_VARIABLES)
         self.predicate_variables = self.match_any_with_ticks(PREDICATE_VARIABLES)
       def match_any(self, iterable):
-        """
-        Returns a regex which matches any character in "iterable."
-        """
         return "[%s]" % ''.join(iterable)
       def match_any_with_ticks(self, iterable):
         return "{0}{1}*".format(self.match_any(iterable), TICK)
